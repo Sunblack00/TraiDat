@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <script src="./bootstrap.bundle.min.js"></script>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid p-0 bg-danger">
+        <div class="d-flex justify-content-center py-3" >
+            <img src="./144p.jpg" alt="" id="img" style="height: 320px; width:  320px;">
+        </div>
+        <div class="d-flex justify-content-center " >
+            <select class="form-select-sm bg-danger-subtle " id="chatluong" style="height: 30px; width: 50%">
+                <option value="144p">144p</option>
+                <option value="240p">240p</option>
+                <option value="480p">480p</option>
+                <option value="720p">720p</option>
+                <option value="1080p">1080p</option>
+            </select>
+        </div>
+        <div class="d-flex justify-content-center mt-5" style="height: 10000px;">
+            <label id="chu" for="" class="fs-2 text-white" >Anh yêu bé TRANG rất nhìu &hearts;</label>
+        </div>
+    </div>
+    <script>
+       $(document).ready(function() {
+            $('#chu').hide()
+            $('#chatluong').change(function(){
+                if($('#chatluong').val() === '144p'){
+                    $('#img').attr('src','./144p.jpg');
+                    $('#chu').hide()
+                }else if($('#chatluong').val() === '240p'){
+                        $('#img').attr('src','./240p.jpg');
+                        $('#chu').hide()
+                }else if($('#chatluong').val() === '480p'){
+                        $('#img').attr('src','./480p.jpg');
+                        $('#chu').hide()
+                }else if($('#chatluong').val() === '720p'){
+                        $('#img').attr('src','./720p.jpg');
+                        $('#chu').hide()
+                }else if($('#chatluong').val() === '1080p'){
+                        $('#img').attr('src','./beiu.jpg');
+                        $('#chu').show()
+                }
+            })
+       })
+        
+    </script>
+</body>
+</html>
